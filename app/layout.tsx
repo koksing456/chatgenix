@@ -2,7 +2,6 @@ import SupabaseProvider from './supabase-provider';
 import Footer from '@/components/ui/Footer';
 import Navbar from '@/components/ui/Navbar';
 import { PropsWithChildren } from 'react';
-import type { Metadata } from 'next'
 import 'styles/globals.scss';
 
 const meta = {
@@ -15,7 +14,7 @@ const meta = {
   type: 'website'
 };
 
-export const metadata: Metadata = {
+export const metadata = {
   title: meta.title,
   description: meta.description,
   cardImage: meta.cardImage,
@@ -49,7 +48,6 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-black loading">
         <SupabaseProvider>
-          {/* @ts-expect-error */}
           <Navbar />
           <main
             id="skip"
